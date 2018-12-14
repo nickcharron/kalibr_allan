@@ -43,7 +43,6 @@ int main(int argc, char **argv) {
         pathMat = p.stem().string()+".mat";
     }
 
-
     // Load rosbag here, and find messages we can play
     rosbag::Bag bag;
     bag.open(pathBag, rosbag::bagmode::Read);
@@ -59,14 +58,15 @@ int main(int argc, char **argv) {
     ROS_INFO("Reading in rosbag file...");
 
 
-    // Create the matlab mat file
-    MATFile *pmat = matOpen(pathMat.c_str(), "w");
+    // // Create the matlab mat file
+    MATFile *pmat;
+    pmat = matOpen(pathMat.c_str(), "w");
     if (pmat == NULL) {
         ROS_ERROR("Error could not create the mat file");
         return(EXIT_FAILURE);
     }
 
-    // Our data vector
+    //Our data vector
     vector<double> dataIMU = vector<double>();
 
     // Step through the rosbag and send to algo methods
@@ -126,5 +126,3 @@ int main(int argc, char **argv) {
     }
     return EXIT_SUCCESS;
 }
-
-
