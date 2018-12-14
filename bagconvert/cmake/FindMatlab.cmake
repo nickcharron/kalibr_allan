@@ -57,7 +57,8 @@ if (NOT MATLAB_ROOT)
 
     # get path to the Matlab executable
     find_program(MATLAB_EXE_PATH matlab
-            PATHS /usr/local/bin)
+            #PATHS /usr/local/bin
+            PATHS /usr/local/MATLAB/R2017a/bin)
     if (MATLAB_EXE_PATH)
         # found it, so let's find its absolute path and go one level up to find MATLAB_ROOT
         message(STATUS "MATLAB executable found: ${MATLAB_EXE_PATH}")
