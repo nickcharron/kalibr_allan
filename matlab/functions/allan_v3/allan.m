@@ -2,7 +2,7 @@ function [avar]=allan(data, tau)
 
 % Compute various Allan deviations for a constant-rate time series
 % [AVAR]=allan(DATA, TAU) 
-%
+% 
 % INPUTS:
 % DATA should be a struct and has the following fields: 
 %  DATA.freq    the time series measurements in arb. units
@@ -39,6 +39,7 @@ function [avar]=allan(data, tau)
 % the total time.
 %
 % versionstr = 'allan v3.0';
+% Updated by Nick, Dec 2018
 % FCz OCT2009
 % v3.0  faster and very plain code, no plotting; various Allan deviations
 %       can be calculated; script and sample data are availabie on
@@ -89,8 +90,8 @@ for j=1:jj
         
     D=zeros(1,n-m(j)+1);
     D(1)=sum(data.freq(1:m(j)))/m(j);
-    for i=2:n-m(j)+1
-        D(i)=D(i-1)+(data.freq(i+m(j)-1)-data.freq(i-1))/m(j);
+    for i=2:n-m(j)+1        
+          D(i)=D(i-1)+(data.freq(i+m(j)-1)-data.freq(i-1))/m(j);
     end
     
     %standard deviation

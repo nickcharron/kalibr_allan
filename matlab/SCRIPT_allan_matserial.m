@@ -6,11 +6,11 @@ clear all
 addpath('functions/allan_v3')
 
 % Our bag information
-mat_path = '../data/imu.mat';
-
+mat_path = '../data/ig_calib_IMU2.mat';
+freq = 50;
 
 % IMU information (todo: move this to the yaml file)
-update_rate = 400;
+update_rate = 50;
 
 
 %% Data processing

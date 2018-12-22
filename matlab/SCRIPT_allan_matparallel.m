@@ -6,10 +6,12 @@ clear all
 addpath('functions/allan_v3')
 
 % Our bag information
-mat_path = '../data/2018-12-13-12-31-33-IMU_Intrinsics.mat';
+mat_path = '../data/ig_calib_IMU2_converted.mat';
+% mat_path = '../data/2018-12-13-12-31-33-IMU_Intrinsics.mat';
 
 % IMU information (todo: move this to the yaml file)
-update_rate = 20;
+% update_rate = 20;
+update_rate = 50;
 
 
 %% Data processing

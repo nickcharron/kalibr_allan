@@ -8,7 +8,7 @@ addpath('functions/allan_v3')
 
 % Our bag information
 titlestr = 'UM7';
-mat_path = '../data/results_20181214T174157.mat';
+mat_path = '../data/results_20181222T172020.mat';
 
 %titlestr = 'Tango Yellowstone #1';
 %mat_path = '../data/results_20171031T115123.mat';
